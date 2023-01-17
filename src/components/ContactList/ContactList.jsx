@@ -6,7 +6,7 @@ import {
 } from 'redux/contacts/contacts-selectors';
 import { selectFilter } from 'redux/filter/filter-selectors';
 import { useEffect } from 'react';
-import { Loader } from '../Loader/Loader';
+import { Loader } from 'components/Loader/Loader';
 import s from './ContactList.module.css';
 import { fetchContacts } from 'redux/contacts/contacts-operations';
 
@@ -17,7 +17,7 @@ export const ContactList = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchContacts);
+    dispatch(fetchContacts());
   }, [dispatch]);
 
   const filtredContacts = contacts.filter(({ name }) =>
