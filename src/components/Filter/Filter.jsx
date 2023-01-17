@@ -4,6 +4,7 @@ import s from './Filter.module.css';
 
 export const Filter = () => {
   const dispatch = useDispatch();
+
   return (
     <label className={s.filter}>
       Find contacts by name
